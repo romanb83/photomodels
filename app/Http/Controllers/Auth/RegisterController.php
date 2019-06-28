@@ -27,7 +27,7 @@ class RegisterController extends BaseController
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+    protected $redirectTo = '/edit_profile';
     private $userRepository;
 
     /**
@@ -65,7 +65,8 @@ class RegisterController extends BaseController
     protected function create(array $data)
     {
         $itemRegUser = $this->userRepository->regUser($data);
-        $this->userRepository->setUserAttributeId($itemRegUser->id);        
+        $this->userRepository->setUserAttributeId($itemRegUser->id);
+        $this->userRepository->setPhotoId($itemRegUser->id);        
        
         return $itemRegUser;
     }

@@ -24,6 +24,9 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
+            $table->boolean('active')->default(FALSE);
+            $table->boolean('profile_flag')->default(FALSE);
+            //$table->ipAddress('ip')->nullable();
             $table->bigInteger('group_id')->unsigned()->nullable();               // Внешний ключ для таблицы group_name
             $table->bigInteger('city_id')->unsigned()->nullable();                // Внешний ключ для таблицы city
             $table->bigInteger('role_id')->unsigned()->default(3);

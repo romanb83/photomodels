@@ -27,6 +27,7 @@ Route::group(['namespace' => 'Photo'], function () {
     
     Route::get('/profile', 'ProfileController@showProfile')->name('show.profile');
     Route::post('/save', 'ProfileController@saveProfile')->name('save.profile');
+    Route::get('/edit_profile', 'ProfileController@editProfile')->name('edit.profile');
 });
 // Route::group(['namespace' => 'Photo'], function () {
 //     Route::get('/create', 'UserController@create')->name('user.create');

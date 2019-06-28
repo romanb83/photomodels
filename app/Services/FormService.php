@@ -61,6 +61,3 @@ class FormService extends CoreService
         return $result;
     }
 }
-
-
-?>

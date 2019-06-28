@@ -17,7 +17,7 @@ class CreateUserAttributesTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->date('age')->nullable();                       // Дата рождения
-            $table->string('gender', 6);                           // Пол
+            $table->string('gender', 6)->nullable();                           // Пол
             $table->unsignedDecimal('phone', 20, 0)->nullable();   // Номер телефона
             $table->string('eye_color', 30)->nullable();                   // Цвет глаз
             $table->string('hair_color', 30)->nullable();                  // Цвет волос
